@@ -23,6 +23,7 @@ while [ $# -gt 0 ]; do
 done
 DIR="${1:-.}"
 cd "$DIR" || exit 2
+[ -f Package.swift ] || [ -n "$(find . -maxdepth 1 \( -name '*.xcodeproj' -o -name '*.xcworkspace' \))" ] || { echo "verify: not an iOS project (no Xcode project or Package.swift) in $(pwd)" >&2; exit 2; }
 
 OUT=".mobile-agent-proof/$(date +%Y%m%d-%H%M%S)"
 mkdir -p "$OUT"

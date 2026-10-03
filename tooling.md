@@ -33,7 +33,7 @@
 - TestFlight first, then phased release [S97][S100] (mobile-dev `ios-store-submission` skill).
 
 ## Verify
-`<stack pack>/verify --flow .maestro/<flow>.yaml` with a simulator booted. It runs SwiftLint and `xcodebuild test`, then saves `xcrun simctl io booted screenshot` and `simctl spawn booted log show` output. Proof lands in `.mobile-agent-proof/<timestamp>/`. If `verify` can't run (missing SDK, no device, Windows), run the same commands by hand.
+`IOS_SCHEME=<scheme> <stack pack>/verify --flow .maestro/<flow>.yaml` with a simulator booted. It runs SwiftLint and `xcodebuild test`, then saves `xcrun simctl io booted screenshot` and `simctl spawn booted log show` output. Proof lands in `.mobile-agent-proof/<timestamp>/`. If `verify` can't run (missing SDK, no device, Windows), run the same commands by hand.
 
 Guard recipe: SwiftLint `custom_rules` with a regex and `severity: error` (for example, banning `// HACK` or `DispatchQueue.main.sync`); local SPM packages for boundaries.
 
