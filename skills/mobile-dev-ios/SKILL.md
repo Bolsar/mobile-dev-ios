@@ -16,7 +16,7 @@ Files, relative to `${CLAUDE_PLUGIN_ROOT}` (or this repo's folder in a copied in
 | `tooling.md` | Toolchain, lint, test, profiling, release, done check | Setting up, verifying or shipping |
 | `verify` | Lint + tests + Maestro flow + screenshot and logs into `.mobile-agent-proof/` | Proving a change works |
 
-Run verify from the app project's root: `${CLAUDE_PLUGIN_ROOT}/verify [--flow .maestro/<flow>.yaml]`.
+Run verify from the app project's root: `IOS_SCHEME=<scheme> ${CLAUDE_PLUGIN_ROOT}/verify [--flow .maestro/<flow>.yaml]`.
 
 Rules:
 - **Existing project wins.** A pick in `defaults.md` is for greenfield only. If the project already uses another library for the same job, keep it and flag only real problems.
