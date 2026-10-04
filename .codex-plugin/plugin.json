@@ -11,7 +11,5 @@
     "mobile",
     "ios"
   ],
-  "skills": [
-    "./skills/"
-  ]
+  "skills": "./skills/"
 }
