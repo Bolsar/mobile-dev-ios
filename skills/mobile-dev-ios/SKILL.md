@@ -7,7 +7,7 @@ description: iOS Stack Pack for the mobile-dev agent (Swift + SwiftUI). Use for 
 
 Requires the **mobile-dev** plugin. If the mobile-dev agent isn't loaded yet, load the `mobile-dev` skill first; this pack only adds the iOS specifics.
 
-Files, relative to `${CLAUDE_PLUGIN_ROOT}` (or this repo's folder in a copied install):
+Files, relative to this pack's root folder, two folders above this file (`${CLAUDE_PLUGIN_ROOT}` in Claude Code, `stacks/ios/` in a copied install):
 
 | File | Holds | Read it when |
 |---|---|---|
@@ -16,7 +16,7 @@ Files, relative to `${CLAUDE_PLUGIN_ROOT}` (or this repo's folder in a copied in
 | `tooling.md` | Toolchain, lint, test, profiling, release, done check | Setting up, verifying or shipping |
 | `verify` | Lint + tests + Maestro flow + screenshot and logs into `.mobile-agent-proof/` | Proving a change works |
 
-Run verify from the app project's root: `IOS_SCHEME=<scheme> ${CLAUDE_PLUGIN_ROOT}/verify [--flow .maestro/<flow>.yaml]`.
+Run verify from the app project's root: `IOS_SCHEME=<scheme> <pack root>/verify [--flow .maestro/<flow>.yaml]`.
 
 Rules:
 - **Existing project wins.** A pick in `defaults.md` is for greenfield only. If the project already uses another library for the same job, keep it and flag only real problems.
