@@ -1,0 +1,5 @@
+{
+  "name": "mobile-dev-ios",
+  "version": "0.2.0",
+  "description": "iOS Stack Pack for the mobile-dev agent: greenfield defaults, idioms, tooling and a verify script. Requires mobile-dev."
+}
